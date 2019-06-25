@@ -37,6 +37,7 @@ import Foundation
 @_silgen_name("yudpsocket_get_server_ip") func c_yudpsocket_get_server_ip(_ host:UnsafePointer<Int8>,ip:UnsafePointer<Int8>) -> Int32
 @_silgen_name("yudpsocket_sentto") func c_yudpsocket_sentto(_ fd:Int32,buff:UnsafePointer<Byte>,len:Int32,ip:UnsafePointer<Int8>,port:Int32) -> Int32
 @_silgen_name("enable_broadcast") func c_enable_broadcast(_ fd:Int32)
+@_silgen_name("enable_timeout") func c_enable_timeout(_ fd:Int32, sec: UInt32, usec: UInt32)
 
 open class UDPClient: Socket {
     public override init(address: String, port: Int32) {
@@ -94,6 +95,10 @@ open class UDPClient: Socket {
         c_enable_broadcast(fd)
     }
     
+    open func enableTimeout(sec: UInt32, usec: UInt32) {
+        guard let fd: Int32 = self.fd else { return }
+        c_enable_timeout(fd, sec: sec, usec: usec)
+    }
     /*
     *
     * send nsdata

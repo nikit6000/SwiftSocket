@@ -99,6 +99,16 @@ int yudpsocket_client() {
     return socketfd;
 }
 
+//enable timeout
+void enable_timeout(int socket_fd, unsigned int sec, unsigned int usec) {
+    struct timeval tv;
+    
+    tv.tv_sec = sec;
+    tv.tv_usec = usec;
+    
+    setsockopt(socket_fd, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv));
+}
+
 //enable broadcast
 void enable_broadcast(int socket_fd) {
     int reuseon = 1;
