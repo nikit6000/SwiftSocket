@@ -30,9 +30,7 @@
 		37454EE41E06163D00800AE5 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 372313911DCF84D80042DA87 /* yudpsocket.c */; };
 		375C48301DDC4C56008C701D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C482F1DDC4C56008C701D /* AppDelegate.swift */; };
 		375C48321DDC4C56008C701D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375C48311DDC4C56008C701D /* ViewController.swift */; };
-		375C48351DDC4C56008C701D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375C48331DDC4C56008C701D /* Main.storyboard */; };
 		375C48371DDC4C56008C701D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 375C48361DDC4C56008C701D /* Assets.xcassets */; };
-		375C483A1DDC4C56008C701D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 375C48381DDC4C56008C701D /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,9 +47,7 @@
 		375C482D1DDC4C56008C701D /* iOS Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		375C482F1DDC4C56008C701D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		375C48311DDC4C56008C701D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		375C48341DDC4C56008C701D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		375C48361DDC4C56008C701D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		375C48391DDC4C56008C701D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		375C483B1DDC4C56008C701D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		377DAA691DCDE40200009697 /* SwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		377DAA761DCDE45D00009697 /* SwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,9 +108,7 @@
 			children = (
 				375C482F1DDC4C56008C701D /* AppDelegate.swift */,
 				375C48311DDC4C56008C701D /* ViewController.swift */,
-				375C48331DDC4C56008C701D /* Main.storyboard */,
 				375C48361DDC4C56008C701D /* Assets.xcassets */,
-				375C48381DDC4C56008C701D /* LaunchScreen.storyboard */,
 				375C483B1DDC4C56008C701D /* Info.plist */,
 			);
 			path = "iOS Example";
@@ -286,7 +280,7 @@
 					};
 					377DAA681DCDE40200009697 = {
 						CreatedOnToolsVersion = 8.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1100;
 						ProvisioningStyle = Manual;
 					};
 					377DAA751DCDE45D00009697 = {
@@ -297,11 +291,12 @@
 			};
 			buildConfigurationList = 5518C82A19A3290F0049DC22 /* Build configuration list for PBXProject "SwiftSocket" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 5518C82619A3290F0049DC22;
 			productRefGroup = 5518C83019A329100049DC22 /* Products */;
@@ -328,9 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				375C483A1DDC4C56008C701D /* LaunchScreen.storyboard in Resources */,
 				375C48371DDC4C56008C701D /* Assets.xcassets in Resources */,
-				375C48351DDC4C56008C701D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,25 +393,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		375C48331DDC4C56008C701D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				375C48341DDC4C56008C701D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		375C48381DDC4C56008C701D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				375C48391DDC4C56008C701D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		37454ED41E06158200800AE5 /* Debug */ = {
@@ -551,7 +525,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftsocket.SwiftSocket;
 				PRODUCT_NAME = SwiftSocket;
@@ -560,7 +534,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -587,7 +561,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Sources/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.swiftsocket.SwiftSocket;
 				PRODUCT_NAME = SwiftSocket;
@@ -595,7 +569,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

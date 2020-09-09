@@ -40,6 +40,9 @@ import Foundation
 @_silgen_name("enable_timeout") func c_enable_timeout(_ fd:Int32, sec: UInt32, usec: UInt32)
 
 open class UDPClient: Socket {
+    
+    
+    
     public override init(address: String, port: Int32) {
         let remoteipbuff: [Int8] = [Int8](repeating: 0x0,count: 16)
         let ret = c_yudpsocket_get_server_ip(address, ip: remoteipbuff)
